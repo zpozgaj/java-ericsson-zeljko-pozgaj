@@ -13,10 +13,6 @@ public class Armstrong {
             number = number / 10; // Maknemo zadnju znamenku iz broja
         }
 
-        if (sumaKubova == originalNumber) {
-            return true;
-        } else {
-            return false;
-        }
+        return sumaKubova == originalNumber;
     }
 }

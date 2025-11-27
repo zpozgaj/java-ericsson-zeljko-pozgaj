@@ -1,10 +1,20 @@
 public class Main {
     public static void main(String[] args) {
+    int limit = 300;
+    String brojeviZaIspis = "";
 
-        for (int number = 1; number <= 9999; number++) {
+    if (limit < 1){
+        System.out.println("Limit mora biti veci od nule");
+    } else {
+        for (int number = 1; number <= limit; number++) {
             if (Armstrong.isArmstrong(number)) {
-                System.out.println(number);
+                if (!brojeviZaIspis.isEmpty()) {
+                    brojeviZaIspis +=  ", ";
+                }
+                brojeviZaIspis += number;
             }
         }
+        System.out.println("Armstrongovi brojevi izmedu 1 i " + limit + " su: " + brojeviZaIspis);
+    }
     }
 }
