@@ -4,12 +4,12 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Trokut trokut = new Trokut("Trokut", 8, 9, 11);
-        Krug krug = new Krug("Krug", 5);
-        Pravokutnik pravokutnik = new Pravokutnik("Pravokutnik", 7, 6);
+        GeometrijskiLik t = new Trokut("Trokut", 3, 4, 5);
+        GeometrijskiLik k = new Krug("Krug", 2);
+        GeometrijskiLik p = new Pravokutnik("Pravokutnik", 4, 6);
 
-        System.out.println(trokut.getNaziv());
-        System.out.println(krug.getNaziv());
-        System.out.println(pravokutnik.getNaziv());
+        System.out.println(t);
+        System.out.println(k);
+        System.out.println(p);
     }
 }

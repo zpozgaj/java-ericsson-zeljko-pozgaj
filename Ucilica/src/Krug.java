@@ -1,20 +1,21 @@
 package src;
 
-public class Krug {
+public class Krug extends GeometrijskiLik {
 
-    private String naziv;
     private double r;
 
     public Krug(String naziv, double r) {
-        this.naziv = naziv;
+        super(naziv);
         this.r = r;
     }
 
-    public String getNaziv() {
-        return naziv;
+    @Override
+    public double povrsina() {
+        return Math.PI * r * r;
     }
 
-    public double getR() {
-        return r;
+    @Override
+    public double opseg() {
+        return 2 * Math.PI * r;
     }
 }
