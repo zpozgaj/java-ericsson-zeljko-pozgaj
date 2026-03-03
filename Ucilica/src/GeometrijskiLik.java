@@ -1,6 +1,8 @@
 package src;
 
-public abstract class GeometrijskiLik {
+public abstract class GeometrijskiLik
+        implements Comparable<GeometrijskiLik> {
+
     private String naziv;
 
     public GeometrijskiLik(String naziv) {
@@ -15,9 +17,14 @@ public abstract class GeometrijskiLik {
     public abstract double opseg();
 
     @Override
+    public int compareTo(GeometrijskiLik other) {
+        return Double.compare(this.povrsina(), other.povrsina());
+    }
+
+    @Override
     public String toString() {
         return naziv +
-                " | Površina: " + povrsina() +
-                " | Opseg: " + opseg();
+                " | Površina: " + String.format("%.2f", povrsina()) +
+                " | Opseg: " + String.format("%.2f", opseg());
     }
 }
